@@ -10,6 +10,7 @@ class Exercise
   			sep_word = word.partition(/\W/)
   			puts(sep_word)
   			puts(sep_word[0]) # Testing if I sperate word from word with punctuation.
+
   			if sep_word[0].length > 4
   				if sep_word[0].match(/^[A-Z]\S*/) # I love Regex :)
   					word_array[idx] = 'Marklar'+ sep_word[1]
@@ -17,12 +18,15 @@ class Exercise
   					word_array[idx] = 'marklar'	+ sep_word [1]
   				end
   			end
+
   		else
   			self.standard_word_exceed_4(word, idx, word_array)
   		end
+
   	end
   	word_array.join(" ")
   end
+  
   def self.standard_word_exceed_4(word, idx, word_array)
   	if word.length > 4
   		if word.match(/^[A-Z]\S*/)
@@ -51,6 +55,6 @@ class Exercise
 
   def self.Fib(nth) # It's one of the ways to find Fibonacci number -- the recrusive one which is not so good for performing actually
   	return nth if nth < 2
-    Fib(nth - 1) + Fib(nth - 2) # I love writing clean elegant code.
+    Fib(nth - 1) + Fib(nth - 2) # I love writing clean and elegant code.
   end
 end
